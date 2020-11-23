@@ -7,6 +7,7 @@ import Login from "../../pages/Login";
 import Header from "../header/index";
 import FormSucess from "../../pages/FormSucess";
 import User from "../../pages/User";
+import UserFeedBack from "../userfeedbacks";
 
 const Authenticator = () => {
   const [isAuthenticated, setAuthentication] = useState(undefined);
@@ -72,14 +73,21 @@ const Authenticator = () => {
         <Route exact path="/">
           <Form />
         </Route>
+
         <Route exact path="/login">
           <Login setAuthentication={setAuthentication} />
         </Route>
+
         <Route exact path="/sucess">
           <FormSucess />
         </Route>
+
         <Route exact path="/users">
           <User />
+        </Route>
+
+        <Route exact path="/users/feedbacks/:id">
+          <UserFeedBack />
         </Route>
       </Switch>
     </>
