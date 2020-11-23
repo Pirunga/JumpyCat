@@ -2,10 +2,8 @@ import React from "react";
 import axios from "axios";
 import { Table } from "antd";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import UserFeedBack from "../userfeedbacks";
 
-const UserList = () => {
+const UserFeedBack = ({ id }) => {
   const token = window.localStorage.getItem("authToken");
 
   const columns = [
@@ -21,20 +19,14 @@ const UserList = () => {
       key: "name",
     },
     {
-      title: "User",
-      dataIndex: "user",
-      key: "user",
+      title: "Comment",
+      dataIndex: "comment",
+      key: "comment",
     },
     {
-      title: "Email",
-      dataIndex: "email",
-      key: "email",
-    },
-    {
-      title: "Feedback",
-      render: (valor) => {
-        return <Link to={`/users/feedbacks/${valor.id}`}>FeedBacks</Link>;
-      },
+      title: "Grade",
+      dataIndex: "grade",
+      key: "grade",
     },
   ];
 
@@ -42,7 +34,7 @@ const UserList = () => {
 
   const getUsers = () => {
     axios
-      .get("https://ka-users-api.herokuapp.com/users", {
+      .get(`https://ka-users-api.herokuapp.com/users/${id}/feedbacks/`, {
         headers: { Authorization: token },
       })
       .then((res) => {
@@ -58,4 +50,4 @@ const UserList = () => {
   );
 };
 
-export default UserList;
+export default UserFeedBack;
