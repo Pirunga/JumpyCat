@@ -1,0 +1,36 @@
+.nav-items {
+  background: linear-gradient(90deg, #40126b 0%, #7692ff 100%);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.nav-logo {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.menu-nav {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: rgb(75, 209, 176);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  background-color: #40126b;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
