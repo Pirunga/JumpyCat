@@ -8,14 +8,9 @@ import "./header.css";
 const Index = ({ isAuthenticated, setAuthentication }) => {
   const history = useHistory();
 
-  const changeButton = (item) => {
-    item.title = "Logout";
-    item.url = "/";
-  };
-
   const signOut = () => {
+    window.localStorage.clear();
     setAuthentication(false);
-    window.localStorage.removeItem("authToken"); //remove o localStorage
   };
   return (
     <nav className="nav-items">
@@ -29,7 +24,7 @@ const Index = ({ isAuthenticated, setAuthentication }) => {
             <li key={index}>
               {item.title === "Login" && isAuthenticated ? (
                 <button className={item.class} onClick={signOut}>
-                  {((item.title = "Logout"), (item.url = "/"))}
+                  Logout
                 </button>
               ) : (
                 <button
@@ -41,15 +36,6 @@ const Index = ({ isAuthenticated, setAuthentication }) => {
                   {item.title}
                 </button>
               )}
-              {/* <button
-                className={item.class}
-                onClick={() => {
-                  history.push(item.url);
-                }}
-              >
-                
-                {item.title}
-              </button> */}
             </li>
           );
         })}

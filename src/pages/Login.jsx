@@ -28,12 +28,12 @@ const Login = ({ setAuthentication }) => {
         window.localStorage.setItem("authToken", res.data.auth_token);
         setAuthentication(true);
         history.push("/users");
-      });
-    // .catch((err) =>
-    //   setError("password", {
-    //     message: err.response.data.error.user_authentication,
-    //   })
-    // );
+      })
+      .catch((err) =>
+        setError("password", {
+          message: err.response.data.error.user_authentication,
+        })
+      );
   };
 
   const goBack = () => {
