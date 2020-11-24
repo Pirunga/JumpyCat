@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Table } from "antd";
+import "./User.css";
 // import "antd/dist/antd.dark.css";
 // import "antd/lib/table/style/css";
 

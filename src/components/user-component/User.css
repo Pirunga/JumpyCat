@@ -1,4 +1,4 @@
-.table-users {
+/* .table-users {
   width: 100%;
   background-color: #e9faf8;
   border-collapse: collapse;
@@ -36,4 +36,8 @@
 
 .ant-pagination a {
   font-size: 20px;
+} */
+
+.ant-table-content {
+  margin-top: 3%;
 }

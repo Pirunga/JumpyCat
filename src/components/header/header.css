@@ -27,6 +27,12 @@
   color: rgb(75, 209, 176);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  background-color: rgb(233, 232, 247);
+}
+.nav-links {
+  border: none;
+  height: 45px;
+  border-radius: 3px;
 }
 
 .nav-links:hover {
