@@ -8,6 +8,7 @@ import Header from "../header/index";
 import FormSucess from "../../pages/FormSucess";
 import User from "../../pages/User";
 import UserFeedBack from "../userfeedbacks";
+import FeedbackForm from "../feedbackform";
 
 const Authenticator = () => {
   const [isAuthenticated, setAuthentication] = useState(undefined);
@@ -88,6 +89,10 @@ const Authenticator = () => {
 
         <Route exact path="/users/feedbacks/:id">
           <UserFeedBack />
+        </Route>
+
+        <Route exact path="/users/feedbacks/:id/new">
+          <FeedbackForm />
         </Route>
       </Switch>
     </>

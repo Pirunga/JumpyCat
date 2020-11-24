@@ -2,8 +2,11 @@ import React from "react";
 import axios from "axios";
 import { Table } from "antd";
 import { useState, useEffect } from "react";
+import { useParams, useHistory } from "react-router-dom";
 
-const UserFeedBack = ({ id }) => {
+const UserFeedBack = () => {
+  const history = useHistory();
+  const { id } = useParams();
   const token = window.localStorage.getItem("authToken");
 
   const columns = [
@@ -43,10 +46,20 @@ const UserFeedBack = ({ id }) => {
   };
 
   useEffect(getUsers, []);
+
   return (
-    <div>
-      <Table dataSource={dataSource} columns={columns}></Table>
-    </div>
+    <>
+      <div>
+        <Table dataSource={dataSource} columns={columns}></Table>
+      </div>
+      <button
+        onClick={() => {
+          history.push(`/users/feedbacks/${id}/new`);
+        }}
+      >
+        New Feedback
+      </button>
+    </>
   );
 };
 
