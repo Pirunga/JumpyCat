@@ -29,16 +29,13 @@ const FeedbackForm = () => {
 
   const handleForm = (feedback) => {
     axios
-      .post(`https://ka-users-api.herokuapp.com/users/${id}/feedbacks`, {
-        headers: { Authorization: token },
-        body: {
-          feedback: {
-            name: `${feedback.name}`,
-            comment: `${feedback.comment}`,
-            grade: `${feedback.grade}`,
-          },
+      .post(
+        `https://ka-users-api.herokuapp.com/users/${id}/feedbacks`,
+        {
+          feedback,
         },
-      })
+        { headers: { Authorization: token } }
+      )
       .then((res) => {
         console.log(res);
         history.push(`/users/feedbacks/${id}`);
