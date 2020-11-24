@@ -3,7 +3,6 @@ import axios from "axios";
 import { Table } from "antd";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import UserFeedBack from "../userfeedbacks";
 
 const UserList = () => {
   const token = window.localStorage.getItem("authToken");
