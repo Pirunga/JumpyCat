@@ -56,7 +56,7 @@ const UserList = () => {
 
   useEffect(getUsers, []);
   return (
-    <div>
+    <div className="table-container">
       <Table
         className="table-users"
         dataSource={dataSource}

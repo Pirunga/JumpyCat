@@ -38,6 +38,15 @@
   font-size: 20px;
 } */
 
-.ant-table-content {
+.ant-table {
   margin-top: 3%;
+  position: relative;
+}
+.ant-table-wrapper {
+  width: 65vw;
+  position: relative;
+}
+
+.table-container {
+  position: relative;
 }
