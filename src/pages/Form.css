@@ -1,3 +1,5 @@
+@import "~antd/dist/antd.dark.css";
+
 .form-container {
   margin: 100px auto;
   width: 1000px;
@@ -109,7 +111,7 @@
 }
 
 .form h1 {
-  font-size: 0.8rem;
+  font-size: 17px;
   text-align: start;
   width: 80%;
   margin-bottom: 1rem;
@@ -117,11 +119,13 @@
 }
 
 .form-inputs {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2p;
   width: 80%;
+  font-size: 15px;
 }
 .form-inputs-whole {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 15px;
 }
 
 .form-inputs p {
@@ -132,9 +136,9 @@
 
 .form-label {
   display: inline-block;
-  font-size: 0.7rem;
   margin-bottom: 6px;
   color: #fff;
+  font-size: 16px;
 }
 
 .form-input {
@@ -145,6 +149,8 @@
   height: 40px;
   width: 100%;
   border: none;
+  font-size: 13px;
+  color: black;
 }
 .form-input-whole {
   display: block;
@@ -154,6 +160,7 @@
   height: 40px;
   width: 20vw;
   border: none;
+  color: black;
 }
 
 .form-input::placeholder {

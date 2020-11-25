@@ -6,11 +6,15 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  transition: 0.6s;
 }
 
 .nav-logo {
   margin-left: 0.5rem;
   font-size: 1.6rem;
+  position: relative;
 }
 
 .menu-nav {
@@ -21,16 +25,25 @@
   width: 70vw;
   justify-content: end;
   margin-right: 2rem;
+  position: relative;
 }
 
 .nav-links {
   color: rgb(75, 209, 176);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  background-color: rgb(233, 232, 247);
+  position: relative;
+}
+.nav-links {
+  border: none;
+  height: 45px;
+  border-radius: 3px;
 }
 
 .nav-links:hover {
   background-color: #40126b;
   border-radius: 4px;
   transition: all 0.2s ease-out;
+  position: relative;
 }

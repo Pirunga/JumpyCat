@@ -3,7 +3,6 @@ import UserList from "../components/user-component/UserList";
 const User = () => {
   return (
     <div>
-      Você está Logado
       <>
         <UserList />
       </>

@@ -1,6 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { Table } from "antd";
+import "./User.css";
+// import "antd/dist/antd.dark.css";
+// import "antd/lib/table/style/css";
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -51,8 +55,12 @@ const UserList = () => {
 
   useEffect(getUsers, []);
   return (
-    <div>
-      <Table dataSource={dataSource} columns={columns}></Table>
+    <div className="table-container">
+      <Table
+        className="table-users"
+        dataSource={dataSource}
+        columns={columns}
+      />
     </div>
   );
 };

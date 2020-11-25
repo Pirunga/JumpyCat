@@ -1,5 +1,5 @@
 {
-  "name": "form-validation",
+  "name": "jumpycat",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,12 +11,12 @@
     "axios": "^0.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hook-form": "^6.11.3",
+    "react-hook-form": "^6.11.5",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0",
+    "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4",
-    "yup": "^0.29.3"
+    "yup": "^0.31.0"
   },
   "scripts": {
     "start": "react-scripts start",
